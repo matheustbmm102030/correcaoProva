@@ -1,10 +1,11 @@
 
-public class Pessoa {
-    private String nome;
-    private Data dataNasc;
+public class Veiculo {
+    private Pessoa proprietario;
+    private Data DataAquisicao;
+    private String finalizade;
     
     public String getNome(){
-        return this.nome; 
+        return this.proprieta; 
     }//
     public void setNome(String n){
         this.nome=n; 
@@ -18,8 +19,8 @@ public class Pessoa {
         this.dataNasc.setAno(a);
     }
     
+    
     void mostrar(){
-        System.out.println(this.nome);
-        dataNasc.mostrar();
-    }    
+        
+    }
 }
