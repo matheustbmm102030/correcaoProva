@@ -12,10 +12,8 @@ public class Pessoa {
     public Data getDataNasc(){
         return this.dataNasc; 
     }//
-    public void setDataNasc(int d,int m,int a){
-        this.dataNasc.setDia(d);
-        this.dataNasc.setMes(m);
-        this.dataNasc.setAno(a);
+    public void setDataNasc(Data d){
+        this.dataNasc=d;
     }
     
     void mostrar(){

@@ -2,25 +2,35 @@
 public class Veiculo {
     private Pessoa proprietario;
     private Data DataAquisicao;
-    private String finalizade;
+    private String finalidade;
     
-    public String getNome(){
-        return this.proprieta; 
+    public Pessoa getProp(){
+        return this.proprietario; 
     }//
-    public void setNome(String n){
-        this.nome=n; 
+    public void setProp(Pessoa n){
+        this.proprietario=n; 
     }//
-    public Data getDataNasc(){
-        return this.dataNasc; 
+    public Data getDataAqui(){
+        return this.DataAquisicao; 
     }//
-    public void setDataNasc(int d,int m,int a){
-        this.dataNasc.setDia(d);
-        this.dataNasc.setMes(m);
-        this.dataNasc.setAno(a);
+    public void setDataAqui(Data d){
+        this.DataAquisicao=d;
     }
     
     
     void mostrar(){
+        System.out.println(this.finalidade);
+        this.proprietario.mostrar();
+        this.DataAquisicao.mostrar();
+    }
+    boolean informarFinalidade(String stg){
+        this.finalidade=stg;
+        if((stg.equals("passeio"))||(stg.equals("diplomacia"))||(stg.equals("aluguel"))){
+            return true;
+        }
+        else{
+            return false;
+        }
         
     }
 }
